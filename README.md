@@ -9,7 +9,7 @@ Implement automatic IOptions Pattern for specific classes with attribute "SmartO
 ```
 builder.SmartOptionsInitalize();
 ```
-## Example:
+## Example Class:
 
 
 ```
@@ -20,11 +20,20 @@ builder.SmartOptionsInitalize();
         public string Option3 { get; set; }
     }
 
+    [SmartOption(nameof(TestOption))]
+    public class TestOption
+    {
+        public string Test { get; set; }
+    }
 
-In apppsettings.json:
-
+```
+## Example AppSettings
+  ```
+  "TestOption": {
+    "Test": "Servus"
+  },
   "ModernOptions": {
     "Option3": "OAHFJD"
-  },
+  },...
 
 ```
