@@ -1,5 +1,20 @@
-# SmartOptions
+# Overview
 Implement automatic IOptions Pattern for specific classes with attribute "SmartOption".
+
+# Installation
+
+Install via .NET CLI
+```
+dotnet add package SmartOptions --version 1.0.0
+```
+or Package Manager:
+
+```
+NuGet\Install-Package SmartOptions -Version 1.0.0
+```
+
+# Usage for Option Classes
+
 ```
 - [SmartOption] => uses class name by default as appssetings.json
 - [SmartOption("Name of configuration section in appsettings.json")]
