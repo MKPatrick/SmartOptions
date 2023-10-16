@@ -15,6 +15,6 @@ jobs:
       run: dotnet build SmartOptions/SmartOptions.csproj -c Release
 
     - name: Pack nugets
-      run: dotnet pack SmartOptions/SmartOptions.csproj -c Release --no-build --output .
+      run: dotnet pack SmartOptions/SmartOptions.csproj -c Release --no-build --output -s SmartOptions  .
     - name: Push to NuGet
       run: dotnet nuget push "SmartOptions/bin/Release/*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
