@@ -9,6 +9,10 @@ Implement automatic IOptions Pattern for specific classes with attribute "SmartO
 ```
 builder.SmartOptionsInitalize();
 ```
+
+
+All classes which has the smartoption attribute will be registered automatically for the IOptions pattern.
+
 ## Example Class:
 
 
@@ -37,3 +41,12 @@ builder.SmartOptionsInitalize();
   },...
 
 ```
+
+## IOptions Pattern DI
+```
+     public YourControllerConstructor(IOptions<ModernOptions> optionTest)
+        {
+   
+        }
+```
+
